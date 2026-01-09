@@ -26,7 +26,6 @@ const backgroundParticlesData = Array.from({ length: 50 }, (_, i) => ({
 
 function App(): JSX.Element {
     const [isRevealed, setIsRevealed] = useState<boolean>(false);
-    const [showFinal, setShowFinal] = useState<boolean>(false);
     const [particles, setParticles] = useState<Particle[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -56,7 +55,6 @@ function App(): JSX.Element {
 
             setTimeout(() => {
                 setParticles([]);
-                setShowFinal(true);
             }, 2000);
         }
     };
